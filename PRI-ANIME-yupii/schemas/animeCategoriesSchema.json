@@ -1,0 +1,20 @@
+{
+    "add-field": [
+        {
+            "name": "category_description",
+            "type": "long_text_type",
+            "indexed": true
+        },
+        {
+            "name": "category_name",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "total_media_count",
+            "type": "plong",
+            "indexed": true
+        }
+    ]
+}
+   

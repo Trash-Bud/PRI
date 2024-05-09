@@ -1,0 +1,83 @@
+{
+    "add-field": [
+        {
+            "name": "character_description",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "canonical_name",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "other_names",
+            "type": "short_text_type",
+            "multiValued": true,
+            "indexed": true
+        },
+        {
+            "name": "names_all",
+            "type": "short_text_type",
+            "multiValued": true,
+            "indexed": true
+        },
+        {
+            "name": "name_en",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "name_ja",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "name_ja_jp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "name_jp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "char_image",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "character_role",
+            "type": "text_general",
+            "indexed": true
+        }
+    ],
+    "add-copy-field":[
+        {
+            "source": "canonical_name",
+            "dest": "names_all"
+        },
+        {
+            "source": "name_en",
+            "dest": "names_all"
+        },
+        {
+            "source": "name_ja",
+            "dest": "names_all"
+        },
+        {
+            "source": "name_ja_jp",
+            "dest": "names_all"
+        },
+        {
+            "source": "name_jp",
+            "dest": "names_all"
+        },
+        {
+            "source": "other_names",
+            "dest": "names_all"
+        }
+    ]
+}
+   

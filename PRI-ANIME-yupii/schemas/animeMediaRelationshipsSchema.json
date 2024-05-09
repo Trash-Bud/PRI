@@ -1,0 +1,20 @@
+{
+    "add-field": [
+        {
+            "name": "id_dest",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "type_dest",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "media_rel_role",
+            "type": "text_general",
+            "indexed": true
+        }
+    ]
+}
+   

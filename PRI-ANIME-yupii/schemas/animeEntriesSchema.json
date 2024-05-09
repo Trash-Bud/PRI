@@ -1,0 +1,275 @@
+{
+	"add-field-type": [
+        {
+            "name":"short_text_type",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.ShingleFilterFactory"}
+
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                     {"class":"solr.ShingleFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "long_text_type",
+            "class" : "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class" : "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class" : "solr.PorterStemFilterFactory"},
+                    {"class" : "solr.StopFilterFactory", "words":"stopwords.txt", "ignoreCase":"true"  },
+                    {"class" : "solr.SynonymGraphFilterFactory", "synonyms":"synonyms.txt" },
+                    {"class" : "solr.FlattenGraphFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class" : "solr.PorterStemFilterFactory"},
+                    {"class" : "solr.StopFilterFactory", "words":"stopwords.txt", "ignoreCase":"true"  },
+                    {"class" : "solr.SynonymGraphFilterFactory", "synonyms":"synonyms.txt" },
+                    {"class" : "solr.FlattenGraphFilterFactory"}
+                ]
+            }
+        }
+    ],
+    "add-field": [
+        {
+            "name": "_nest_parent_",
+            "type": "string",
+            "indexed": true,
+            "stored":"true"
+        },
+        {
+            "name": "canonical_title",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ar",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ca_es",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_da_dk",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_de_de",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en-us",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_Sankarea",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_ar",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_cn",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_il",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_jp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_jp__Koukaku_Kidoutai",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_kr",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_en_us",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_es_es",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_fi_fi",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_fr_fr",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_he_il",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_hu_hu",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_id_id",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_it_it",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ja_jp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_jp_jp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ko_kn",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ko_kr",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_nl_nl",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_pl_pl",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_pt_pt",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ro_ro",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_ru_ru",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_sr_sp",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_sr_cs",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_sv_se",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_th_th",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_vi_vn",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_xh_cn",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_zh_cn",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "title_zh_tw",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "Categories",
+            "type": "text_general",
+            "multiValued": true,
+            "indexed": true
+        },
+        {
+            "name": "title",
+            "type": "short_text_type",
+            "multiValued": true,
+            "indexed": true
+        }
+    ]
+}
+   

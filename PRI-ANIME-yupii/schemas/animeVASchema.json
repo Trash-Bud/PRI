@@ -1,0 +1,25 @@
+{
+    "add-field": [
+        {
+            "name": "VA_portrait",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "VA_language",
+            "type": "text_general",
+            "indexed": true
+        },
+        {
+            "name": "VA_name",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "VA_description",
+            "type": "long_text_type",
+            "indexed": true
+        }
+    ]
+}
+   

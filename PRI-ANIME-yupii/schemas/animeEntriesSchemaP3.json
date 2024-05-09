@@ -1,0 +1,106 @@
+{
+    "add-field":[
+        {
+            "name": "year",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "episode_length",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "rating_ranking",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "show_type",
+            "type": "text_general",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "status",
+            "type": "text_general",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "subtype",
+            "type": "text_general",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "age_rating_guide",
+            "type": "text_general",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "nsfw",
+            "type": "booleans",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "synopsis",
+            "type": "long_text_type",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "age_rating",
+            "type": "text_general",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "end_date",
+            "type": "pdate",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "favourites_count",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "average_rating",
+            "type": "pfloat",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "popularity_ranking",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "total_length",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "episode_count",
+            "type": "plong",
+            "multiValued": false,
+            "indexed": true
+        },
+        {
+            "name": "start_date",
+            "type": "pdate",
+            "multiValued": false,
+            "indexed": true
+        }      
+    ]
+}

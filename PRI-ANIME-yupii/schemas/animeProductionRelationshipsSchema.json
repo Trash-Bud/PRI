@@ -1,0 +1,15 @@
+{
+    "add-field": [
+        {
+            "name": "companyName",
+            "type": "short_text_type",
+            "indexed": true
+        },
+        {
+            "name": "production_role",
+            "type": "text_general",
+            "indexed": true
+        }
+    ]
+}
+   
